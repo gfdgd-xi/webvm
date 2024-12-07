@@ -1,5 +1,6 @@
 FROM --platform=i386 i386/debian:bookworm
 ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install ca-certificates -y
 RUN echo "deb [trusted=true] https://repo.gxde.org/gxde-os/bixie/ ./" > /etc/apt/sources.list.d/gxde-temp.list
 RUN apt-get clean && apt-get update && apt-get -y upgrade
 RUN apt-get -y install apt-utils gcc \
@@ -8,7 +9,7 @@ RUN apt-get -y install apt-utils gcc \
 	patch wamerican ucf manpages \
 	file luajit make lua5.4 dialog curl \
 	less cowsay netcat-openbsd fastfetch
-RUN apt-get -y install gxde-desktop-android -y
+RUN apt-get -y install gxde-desktop --no-install-recommends -y
 RUN useradd -m user && echo "user:password" | chpasswd
 COPY --chown=user:user ./examples /home/user/examples
 RUN chmod -R +x  /home/user/examples/lua
