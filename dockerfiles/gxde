@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install ca-certificates -y
 RUN echo "deb [trusted=true] https://repo.gxde.org/gxde-os/bixie/ ./" > /etc/apt/sources.list.d/gxde-temp.list
 RUN apt-get clean && apt-get update && apt-get -y upgrade
 RUN apt-get -y install apt-utils \
-	python3 vim unzip \
+	python3 vim unzip busybox \
 	fakeroot dbus base whiptail hexedit \
 	patch wamerican ucf manpages \
 	file luajit make lua5.4 dialog curl \
