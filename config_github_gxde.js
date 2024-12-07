@@ -7,9 +7,9 @@ export const printIntro = false;
 // Is a graphical display needed
 export const needsDisplay = true;
 // Executable full path (Required)
-export const cmd = "/bin/busybox"; // Default: "/bin/bash";
+export const cmd = CMD; // Default: "/bin/bash";
 // Arguments, as an array (Required)
-export const args = ["init"]; // Default: ["--login"];
+export const args = ARGS; // Default: ["--login"];
 // Optional extra parameters
 export const opts = {
 	// User id
