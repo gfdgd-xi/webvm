@@ -8,8 +8,9 @@ RUN apt-get -y install apt-utils \
 	fakeroot dbus base whiptail hexedit \
 	patch wamerican ucf manpages \
 	file luajit make lua5.4 dialog curl \
-	less netcat-openbsd fastfetch gxde-source xinit
+	less netcat-openbsd fastfetch gxde-source
 RUN apt-get -y install gxde-desktop --no-install-recommends --no-install-suggests -y
+RUN apt-get -y install xinit -y
 RUN mv /usr/share/wallpapers/deepin/ /tmp
 RUN mkdir -p /usr/share/wallpapers/deepin/
 RUN cp -r /tmp/deepin/The_Gongga_Mountain_by_wangjinyu.jpg /usr/share/wallpapers/deepin/desktop.jpg
