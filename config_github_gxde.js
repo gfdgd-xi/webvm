@@ -9,7 +9,7 @@ export const needsDisplay = true;
 // Executable full path (Required)
 export const cmd = "/bin/busybox"; // Default: "/bin/bash";
 // Arguments, as an array (Required)
-export const args = []; // Default: ["--login"];
+export const args = ["init"]; // Default: ["--login"];
 // Optional extra parameters
 export const opts = {
 	// User id
