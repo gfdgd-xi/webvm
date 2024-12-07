@@ -8,7 +8,7 @@ RUN apt-get -y install apt-utils \
 	fakeroot dbus base whiptail hexedit \
 	patch wamerican ucf manpages \
 	file luajit make lua5.4 dialog curl \
-	less netcat-openbsd fastfetch gxde-source
+	less netcat-openbsd fastfetch gxde-source xinit
 RUN apt-get -y install gxde-desktop --no-install-recommends --no-install-suggests -y
 RUN mv /usr/share/wallpapers/deepin/ /tmp
 RUN mkdir -p /usr/share/wallpapers/deepin/
